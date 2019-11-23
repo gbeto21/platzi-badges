@@ -1,39 +1,38 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
+import platziConfLogo from '../images/platziconf-logo.svg';
+import astronauts from '../images/astronauts.svg';
 
-import './styles/Home.css';
-import platziconfLogoImage from '../images/platziconf-logo.svg';
-import astronautsImage from '../images/astronauts.svg';
 
-export default class Home extends Component {
-  render() {
+// class Home extends React.Component {
+
+//     render(
+//         return()
+
+//     )
+
+// }
+
+function Home() {
     return (
-      <div className="Home">
-        <div className="container">
-          <div className="row">
-            <div className="Home__col col-12 col-md-4">
-              <img
-                src={platziconfLogoImage}
-                alt="Platzi Conf Logo"
-                className="img-fluid mb-2"
-              />
 
-              <h1>Badge Management System</h1>
-              <Link className="btn btn-primary" to="/badges">
-                Start
-              </Link>
+        <React.Fragment>
+            <div className="container ">
+                <div className="row home-background align-items-center">
+                    <div className="col text-center text-white">
+                        <img height="125px" width="150px" src={platziConfLogo} alt="platziCof Logo"/>
+                        <h3>Print Your Badges</h3>
+                        <p>The easiest way to manage your <br/> conference </p>
+                        <div className="Badge__buttons">
+                            <a className="btn btn-primary">Start now</a>
+                        </div>
+                    </div>
+                    <div className="col text-center" alt="astronauts">
+                        <img height="375px" width="420px" src={astronauts}/>
+                    </div>
+                </div>
             </div>
-
-            <div className="Home__col d-none d-md-block col-md-8">
-              <img
-                src={astronautsImage}
-                alt="Astronauts"
-                className="img-fluid p-4"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-    );
-  }
+        </React.Fragment>
+    )
 }
+
+export default Home;
